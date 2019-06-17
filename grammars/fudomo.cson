@@ -1,0 +1,18 @@
+name: 'Fudomo'
+scopeName: 'source.fudomo'
+type: 'tree-sitter'
+parser: 'tree-sitter-fudomo'
+fileTypes: ['fudomo']
+scopes:
+  'comment': 'fudomo.comment'
+  'decomposition': 'fudomo.decomposition'
+  'decomposition > typedFunction': 'fudomo.decomposition.typedFunction'
+  'decomposition > typedFunction > type': 'fudomo.decomposition.typedFunction.type'
+  'decomposition > typedFunction > function': 'fudomo.decomposition.typedFunction.function'
+  'decomposition > links > link > localLink': 'fudomo.decomposition.link.localLink'
+  'decomposition > links > link > forwardLink > reference': 'fudomo.decomposition.link.forwardLink.reference'
+  'decomposition > links > link > forwardLink > typedFunction > type': 'fudomo.decomposition.link.forwardLink.type'
+  'decomposition > links > link > forwardLink > typedFunction > untypedFunction': 'fudomo.decomposition.link.forwardLink.function'
+  'decomposition > links > link > reverseLink > reference': 'fudomo.decomposition.link.reverseLink.reference'
+  'decomposition > links > link > reverseLink > typedFunction > type': 'fudomo.decomposition.link.reverseLink.type'
+  'decomposition > links > link > reverseLink > typedFunction > untypedFunction': 'fudomo.decomposition.link.reverseLink.function'
