@@ -9,9 +9,9 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "fudomo-transform": "file:../fudomo-transform",
+    "fudomo-transform": "~0.1.0",
     "tree-sitter": "^0.15.1",
-    "tree-sitter-fudomo": "file:../tree-sitter-fudomo",
+    "tree-sitter-fudomo": "~0.1.0",
     "vm2": "^3.8.1",
     "yaml": "^1.5.1"
   },
