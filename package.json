@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "description": "Language support for a model transformation approach based on functional decomposition",
   "keywords": ["model transformation", "code generation", "functional decomposition"],
-  "repository": "https://github.com/atom/language-fudomo",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -29,5 +28,13 @@
         "^1.0.0": "consumeTreeView"
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lassy-fmde/language-fudomo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lassy-fmde/language-fudomo/issues"
+  },
+  "homepage": "https://github.com/lassy-fmde/language-fudomo"
 }
