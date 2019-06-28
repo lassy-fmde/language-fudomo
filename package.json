@@ -1,7 +1,7 @@
 {
   "name": "language-fudomo",
   "main": "./lib/language-fudomo",
-  "version": "0.2.9",
+  "version": "0.2.8",
   "description": "Language support for a model transformation approach based on functional decomposition",
   "keywords": [
     "model transformation",
@@ -10,13 +10,13 @@
   ],
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": "1.37.0"
   },
   "dependencies": {
     "atom-package-deps": "^5.1.0",
-    "fudomo-transform": "~0.1.6",
-    "tree-sitter": "0.13.23",
-    "tree-sitter-fudomo": "~0.1.5",
+    "fudomo-transform": "~0.1.7",
+    "tree-sitter": "~0.15.5",
+    "tree-sitter-fudomo": "~0.1.6",
     "vm2": "^3.8.2",
     "yaml": "^1.6.0"
   },
