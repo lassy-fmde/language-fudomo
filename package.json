@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "engines": {
-    "atom": "1.37.0"
+    "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
     "atom-package-deps": "^5.1.0",
