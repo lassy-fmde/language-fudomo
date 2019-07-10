@@ -1,18 +1,52 @@
-name: 'Fudomo'
 scopeName: 'source.fudomo'
-type: 'tree-sitter'
-parser: 'tree-sitter-fudomo'
-fileTypes: ['fudomo']
-scopes:
-  'comment': 'fudomo.comment'
-  'decomposition': 'fudomo.decomposition'
-  'decomposition > typedFunction': 'fudomo.decomposition.typedFunction'
-  'decomposition > typedFunction > type': 'fudomo.decomposition.typedFunction.type'
-  'decomposition > typedFunction > function': 'fudomo.decomposition.typedFunction.function'
-  'decomposition > links > link > localLink': 'fudomo.decomposition.link.localLink'
-  'decomposition > links > link > forwardLink > reference': 'fudomo.decomposition.link.forwardLink.reference'
-  'decomposition > links > link > forwardLink > typedFunction > type': 'fudomo.decomposition.link.forwardLink.type'
-  'decomposition > links > link > forwardLink > typedFunction > untypedFunction': 'fudomo.decomposition.link.forwardLink.function'
-  'decomposition > links > link > reverseLink > reference': 'fudomo.decomposition.link.reverseLink.reference'
-  'decomposition > links > link > reverseLink > typedFunction > type': 'fudomo.decomposition.link.reverseLink.type'
-  'decomposition > links > link > reverseLink > typedFunction > untypedFunction': 'fudomo.decomposition.link.reverseLink.function'
+name: 'Fudomo'
+fileTypes: [ # file extensions
+  'fudomo'
+]
+
+patterns: [
+  {
+    match: '#.*\\n',
+    name: 'comment.line.fudomo'
+  },
+  {
+    # decomposition type
+    match: '([a-zA-Z][a-zA-Z0-9]*)\.([a-zA-Z][a-zA-Z0-9]*):'
+    captures:
+      0:
+        name: 'entity.name.section.decomposition.fudomo'
+      1:
+        name: 'storage.type.decomposition.fudomo'
+      2:
+        name: 'entity.name.function.decomposition.fudomo'
+  },
+  {
+    # forward link
+    match: '([a-zA-Z][a-zA-Z0-9]*)\\s*->\\s*([a-zA-Z][a-zA-Z0-9]*)\.([a-zA-Z][a-zA-Z0-9]*)'
+    name: 'entity.name.forward-link.fudomo'
+    captures:
+      1:
+        name: 'variable.other.forward-link.fudomo'
+      2:
+        name: 'storage.type.forward-link.fudomo'
+      3:
+        name: 'variable.other.forward-link.fudomo'
+  },
+  {
+    # reverse link
+    match: '([a-zA-Z][a-zA-Z0-9]*)\\s*<-\\s*([a-zA-Z][a-zA-Z0-9]*)\.([a-zA-Z][a-zA-Z0-9]*)'
+    name: 'entity.name.reverse-link.fudomo'
+    captures:
+      1:
+        name: 'variable.other.reverse-link.fudomo'
+      2:
+        name: 'storage.type.reverse-link.fudomo'
+      3:
+        name: 'variable.other.reverse-link.fudomo'
+  },
+  {
+    # local link
+    match: '[a-zA-Z][a-zA-Z0-9]*'
+    name: 'variable.other.local-link.fudomo'
+  }
+]
