@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "atom-package-deps": "^5.1.0",
-    "fudomo-transform": "~0.1.8",
+    "fudomo-transform": "~0.1.10",
     "vm2": "^3.8.2",
     "yaml": "^1.6.0"
   },
