@@ -20,7 +20,8 @@
     "yaml": "^1.6.0"
   },
   "package-deps": [
-    "linter:2.2.0"
+    "linter:2.2.0",
+    "busy-signal:2.0.0"
   ],
   "providedServices": {
     "linter": {
