@@ -1,7 +1,7 @@
 {
   "name": "language-fudomo",
   "main": "./lib/language-fudomo",
-  "version": "0.2.31",
+  "version": "0.2.32",
   "description": "Language support for a model transformation approach based on functional decomposition",
   "keywords": [
     "model transformation",
